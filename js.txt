@@ -89,3 +89,83 @@ Point : 若是加法會自動轉成字串, 減法則是轉數字
 --> 因為計算時會先轉成二進位
 
 ( 0.1 * 10000 + 0.2 * 10000 )/10000 == 0.3
+
+// 1+2+3+4+5=10
+// 概念
+total = 0;
+total += 1;
+total += 2;
+total += 3;
+total += 4;
+total += 5;
+
+// 迴圈
+// while1
+var total = 0;
+var i = 1;
+while (i <= 5){
+    total += i;
+    i++;
+}
+
+// while2
+var total = 0;
+var i = 0;
+while (i < 5){
+    i++;
+    total += i;
+}
+
+// for
+var total = 0;
+for (let i = 1; i <= 5; i++){
+    total += i;
+}
+
+// for縮減
+// 原本
+var dataList = [10, 20, 30];
+for (let i = 0; i < dataList.length; i++){
+    var data = dataList[i];
+    alert(data);
+}
+
+// 新的
+var dataList = [10, 20, 30];
+for (let data of dataList){
+    alert(data);
+}
+--> 10, 20, 30
+
+var dataList = [10, 20, 30];
+for (let data in dataList){
+    alert(data);
+}
+--> 0, 1, 2
+
+Point : 迴圈遇到未知值的時候會壞掉(in不會)
+var dataList = [10, 20, 30];
+var dataList[4] = 40;  // 沒有dataList[3]
+for (let data of dataList){
+    alert(data);
+}
+--> 失敗
+
+var dataList = [10, 20, 30];
+var dataList[4] = 40;  // 沒有dataList[3]
+for (let data of dataList){
+    if (typeof dataList[i] === "undefined"){
+        continue;  // 略過空值
+    }
+    alert(data);
+}
+--> 成功
+--> 10, 20, 30, 40
+
+var dataList = [10, 20, 30];
+var dataList[4] = 40;  // 沒有dataList[3]
+for (let data in dataList){
+    alert(data);
+}
+--> 成功
+--> 0, 1, 2, 4
