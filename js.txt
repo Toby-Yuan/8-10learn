@@ -72,3 +72,14 @@ var pathName = ' C:\\doc\\fag.txt '
 
 \n 換行
 \t tab(定位)
+
+// 字串 <--> 數字
+var x = 12;
+x.toString();
+--> 字串"12"
+
+var y = "34";
+Number(y);
+--> 數字34
+
+Point : 若是加法會自動轉成字串, 減法則是轉數字
