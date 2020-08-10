@@ -6,14 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" id="test">
+    <button id="show" onclick="showIt()">submit</button>
     
     <script>
-        function showStar () {
-            alert ("*****");
+        function showStar (count) {
+            let star = "";
+            for (let i = 1; i <= count; i++) {
+                star += "*";
+            }
+            alert(star);
         }
 
         // 呼叫函數
-        showStar();
+        // showStar(3);
+
+        function showIt (){
+            var ct = test.value;
+            showStar(ct);
+        }
+
     </script>
 </body>
 </html>
