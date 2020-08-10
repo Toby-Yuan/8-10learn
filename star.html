@@ -10,6 +10,7 @@
     <button id="show" onclick="showIt()">submit</button>
     
     <script>
+        // 自己的版本
         function showStar (count) {
             let star = "";
             for (let i = 1; i <= count; i++) {
@@ -23,8 +24,45 @@
 
         function showIt (){
             var ct = test.value;
+            if(ct <= 0){
+                return alert("The count isn't big enough");
+            }else if(ct > 21){
+                return alert("The count is toooooo big");
+            }else if(ct == 4){
+                return alert("Number 4 isn't a good number");
+            };
             showStar(ct);
         }
+
+        // 老師的版本
+        // function裡面可以放入預設值, 也可以有兩個以上的參數
+        // function showStar (count, what = "*") {
+        //     let star = "";
+        //     for (let i = 1; i <= count; i++) {
+        //         star += what;
+        //     }
+        //     alert(star);
+        // }
+
+        // showStar(3, "+")
+
+        // 加入檢查要素
+        // function showStar (count, what = "*") {
+        //     if(count <= 0){
+        //         return alert("The count isn't big enough");
+        //     }else if(count > 21){
+        //         return alert("The count is toooooo big");
+        //     }else if(count = 4){
+        //         return alert("Number 4 isn't a good number");
+        //     };
+        //     let star = "";
+        //     for (let i = 1; i <= count; i++) {
+        //         star += what;
+        //     }
+        //     alert(star);
+        // }
+
+        // showStar(4, "+")
 
     </script>
 </body>
