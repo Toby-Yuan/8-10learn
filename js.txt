@@ -14,3 +14,23 @@ person = {
     lastName = "Lin"
 };
 --> 失敗
+
+// 變數直接打在document外面, 所屬於window之下
+<script>
+    var x = 100;
+</script>
+--> window.x
+
+// 沒有var宣告的變數會變成全域變數
+
+// let的宣告不可以重複
+let x1 = 200;
+let x1 = 100;
+--> 失敗
+
+let x1 = 200;
+let x2 = 100;
+--> 成功
+
+// 可以連續等於
+var z = y = x;

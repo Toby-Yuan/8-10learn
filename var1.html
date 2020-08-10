@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        .task-description,
+        .list-group {
+            font-size: 1.25em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>JavaScript Var1</h1>
+
+        <div class="form-group task-description">
+            <label for="textBox1">A.輸入資料</label>
+            <input type="text" id="textBox1" class="form-control" value="World">
+        </div>
+
+        <button id="okButton" class="btn btn-success" type="button">B.點按按鈕執行程式</button>
+
+        <p class="task-description">C.檢視結果:</p>
+        <div id="report" class="task-description"></div>
+        <div id="report2" class="task-description"></div>
+        <div id="report3" class="task-description"></div>
+    </div>
+
+    <script>
+        var xr2 = 100;
+        var xr3 = 100;
+
+        $(document).ready(function () {
+            var yr2 = 200;
+
+            // TODO: Question
+            // report.innerHTML = `
+            //         x = ${xr2}<br>
+            //         y = ${yr2}<br>
+            //         z = ${zr2}<br>
+            //     `;
+
+            var yr3 = 200; // TODO: y no var
+
+            $("#okButton").on('click', function () {
+                var userName = textBox1.value;
+                report.innerText = 'Hello!' + userName;
+            
+                var zr2 = 300;
+
+                report2.innerHTML = `
+                    x = ${xr2}<br>
+                    y = ${yr2}<br>
+                    z = ${zr2}<br>
+                `;
+
+                var xr3 = 300;  // TODO: x no var
+
+                report3.innerHTML = `
+                    x = ${xr3}<br>
+                    window.x = ${window.xr3}<br>
+                    window.y = ${window.yr3}<br>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>
