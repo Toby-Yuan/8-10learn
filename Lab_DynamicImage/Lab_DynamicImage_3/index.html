@@ -29,7 +29,12 @@ function setImage()
 	
 	// 為什麼圖片都不會變呢？
 	iImage += 1;
+	// // way1
 	iImage = iImage % img.length;
+	// way2
+	// if(iIamge >= 4){
+	// 	iImage = 0;
+	// };
 
 	document.getElementById("imgs").src = img[iImage];
 	document.getElementById("imgshref").href = url[iImage];
