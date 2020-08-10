@@ -1,3 +1,16 @@
 // 複習javascipt
 // const
 const 本身不能再修改,可是內容可能可以(例如 : 陣列)
+
+const person = {
+    firstName = "jerry",
+    lastName = "Lin"
+};
+person.firstName = "Jerry";
+--> 成功
+
+person = {
+    firstName = "jerry",
+    lastName = "Lin"
+};
+--> 失敗
