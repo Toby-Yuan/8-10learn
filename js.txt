@@ -170,3 +170,18 @@ for (let data in dataList){
 }
 --> 成功
 --> 0, 1, 2, 4
+
+// 隨機數
+// Math.random
+Math.random()
+--> 0~1之間隨機一個數(非整數)
+
+Math.random()*n
+--> 0~n之間
+
+// Math.floor
+Math.floor(n)
+--> 對n取高斯(無條件捨去)
+
+Math.floor(Math.random()*n)
+--> 0~n之間隨機整數
