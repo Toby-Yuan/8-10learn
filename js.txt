@@ -62,3 +62,13 @@ while (row = readLine()) {
     }
     //process one line;
 }
+
+// \後面可以加上需要顯示的符號(跳離角色,回到原本的樣子)
+var timeData = ' 3\'14\" '
+--> 3'14"
+
+var pathName = ' C:\\doc\\fag.txt '
+--> C:\doc\fag.txt
+
+\n 換行
+\t tab(定位)
