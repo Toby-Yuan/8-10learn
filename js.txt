@@ -161,6 +161,7 @@ for (let data of dataList){
 }
 --> 成功
 --> 10, 20, 30, 40
+--> ===要值跟類別都一樣！！！
 
 var dataList = [10, 20, 30];
 var dataList[4] = 40;  // 沒有dataList[3]
