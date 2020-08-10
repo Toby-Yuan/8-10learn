@@ -34,3 +34,31 @@ let x2 = 100;
 
 // 可以連續等於
 var z = y = x;
+
+// 整理語法！！！
+// 原本
+row = readLine();
+while (row) {
+    if(row R1 is wrong){
+        row = readLine();
+        continue;
+    }
+    if(row R2 is null){
+        row = readLine();
+        continue;
+    }
+
+    // process one line
+    row = readLine;
+}
+
+// 新的
+while (row = readLine()) {
+    if(row R1 is wrong){
+        continue;
+    }
+    if(row R2 is null){
+        continue;
+    }
+    //process one line;
+}
